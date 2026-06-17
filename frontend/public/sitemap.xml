@@ -3,161 +3,161 @@
 
   <!-- ── Main pages ── -->
   <url>
-    <loc>https://quickfiletools.com/</loc>
+    <loc>https://quickfiletools.xyz/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools</loc>
+    <loc>https://quickfiletools.xyz/tools</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog</loc>
+    <loc>https://quickfiletools.xyz/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/about</loc>
+    <loc>https://quickfiletools.xyz/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/contact</loc>
+    <loc>https://quickfiletools.xyz/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/privacy</loc>
+    <loc>https://quickfiletools.xyz/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/terms</loc>
+    <loc>https://quickfiletools.xyz/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- ── Free Tool pages ── -->
   <url>
-    <loc>https://quickfiletools.com/tools/image-compressor</loc>
+    <loc>https://quickfiletools.xyz/tools/image-compressor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/image-resizer</loc>
+    <loc>https://quickfiletools.xyz/tools/image-resizer</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/image-to-pdf</loc>
+    <loc>https://quickfiletools.xyz/tools/image-to-pdf</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/pdf-merge</loc>
+    <loc>https://quickfiletools.xyz/tools/pdf-merge</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/pdf-split</loc>
+    <loc>https://quickfiletools.xyz/tools/pdf-split</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/jpg-to-png</loc>
+    <loc>https://quickfiletools.xyz/tools/jpg-to-png</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/png-to-jpg</loc>
+    <loc>https://quickfiletools.xyz/tools/png-to-jpg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/image-to-webp</loc>
+    <loc>https://quickfiletools.xyz/tools/image-to-webp</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/pdf-compress</loc>
+    <loc>https://quickfiletools.xyz/tools/pdf-compress</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/pdf-password-remover</loc>
+    <loc>https://quickfiletools.xyz/tools/pdf-password-remover</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/esign-pdf</loc>
+    <loc>https://quickfiletools.xyz/tools/esign-pdf</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/pdf-ocr</loc>
+    <loc>https://quickfiletools.xyz/tools/pdf-ocr</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/background-remover</loc>
+    <loc>https://quickfiletools.xyz/tools/background-remover</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/tools/watermark-remover</loc>
+    <loc>https://quickfiletools.xyz/tools/watermark-remover</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- ── Blog posts ── -->
   <url>
-    <loc>https://quickfiletools.com/blog/how-to-compress-images-without-losing-quality</loc>
+    <loc>https://quickfiletools.xyz/blog/how-to-compress-images-without-losing-quality</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/jpg-vs-png-vs-webp-which-format-to-use</loc>
+    <loc>https://quickfiletools.xyz/blog/jpg-vs-png-vs-webp-which-format-to-use</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/how-to-merge-pdf-files-online-free</loc>
+    <loc>https://quickfiletools.xyz/blog/how-to-merge-pdf-files-online-free</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/how-to-resize-images-online-without-losing-quality</loc>
+    <loc>https://quickfiletools.xyz/blog/how-to-resize-images-online-without-losing-quality</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/how-to-split-pdf-into-separate-pages-online</loc>
+    <loc>https://quickfiletools.xyz/blog/how-to-split-pdf-into-separate-pages-online</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/convert-images-to-pdf-online-complete-guide</loc>
+    <loc>https://quickfiletools.xyz/blog/convert-images-to-pdf-online-complete-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/what-is-webp-format-should-you-use-it</loc>
+    <loc>https://quickfiletools.xyz/blog/what-is-webp-format-should-you-use-it</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/how-to-reduce-pdf-file-size</loc>
+    <loc>https://quickfiletools.xyz/blog/how-to-reduce-pdf-file-size</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/best-free-online-file-tools-2024</loc>
+    <loc>https://quickfiletools.xyz/blog/best-free-online-file-tools-2024</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://quickfiletools.com/blog/how-to-digitally-sign-pdf-free</loc>
+    <loc>https://quickfiletools.xyz/blog/how-to-digitally-sign-pdf-free</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
