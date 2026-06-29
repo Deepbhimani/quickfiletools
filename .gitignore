@@ -7,13 +7,3 @@ dist/
 /backend/uploads/
 
 # Unused Pro version files
-backend/middleware/premiumOnly.js
-backend/models/Payment.js
-backend/routes/payments.js
-backend/services/paymentService.js
-frontend/src/pages/Pricing.jsx
-frontend/src/pages/Dashboard.jsx
-frontend/src/pages/Login.jsx
-frontend/src/pages/Signup.jsx
-frontend/src/components/common/PricingCard.jsx
-frontend/src/components/common/ProtectedRoute.jsx
