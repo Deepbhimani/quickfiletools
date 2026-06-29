@@ -11,7 +11,6 @@ import errorHandler from "./middleware/errorHandler.js";
 // Routes
 import authRoutes      from "./routes/auth.js";
 import toolsRoutes     from "./routes/tools.js";
-import paymentsRoutes  from "./routes/payments.js";
 import blogRoutes      from "./routes/blog.js";
 import analyticsRoutes from "./routes/analytics.js";
 import adminRoutes     from "./routes/admin.js";
@@ -22,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 
 // ── Security & parsing ────────────────────────────────────────────────────────
 app.use(helmet());
-// ✅ With this
+
 const allowedOrigins = [
   "https://quickfiletools.xyz",
   "https://www.quickfiletools.xyz",
@@ -48,7 +47,6 @@ app.use(globalLimiter);
 // ── Routes ────────────────────────────────────────────────────────────────────
 app.use("/api/auth",      authRoutes);
 app.use("/api/tools",     toolsRoutes);
-app.use("/api/payments",  paymentsRoutes);
 app.use("/api/blog",      blogRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/admin",     adminRoutes);
