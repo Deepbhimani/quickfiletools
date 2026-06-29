@@ -1,8 +1,8 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Zap, Shield, Clock, Download, ArrowRight, Star } from "lucide-react";
 
-// ─── Free tools shown on homepage ────────────────────────────────────────────
 const TOOLS = [
   { slug: "image-compressor", name: "Image Compressor",  desc: "Reduce image size without losing quality",   icon: "🗜️" },
   { slug: "image-resizer",    name: "Image Resizer",      desc: "Resize images to any dimension instantly",   icon: "📐" },
@@ -21,16 +21,17 @@ const FEATURES = [
   { icon: <Download className="h-6 w-6 text-blue-500" />, title: "Instant Download", desc: "Download your processed files immediately after conversion." },
 ];
 
-// ─── AdSense Banner Component ─────────────────────────────────────────────────
-// Replace data-ad-client and data-ad-slot with your real AdSense values
-function AdBanner({ slot = "horizontal" }) {
+function AdBanner() {
+  useEffect(() => {
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch {}
+  }, []);
   return (
     <div className="w-full flex justify-center my-8">
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"   // TODO: replace with your AdSense publisher ID
-        data-ad-slot={slot === "horizontal" ? "1234567890" : "0987654321"} // TODO: replace with your ad slot ID
+        data-ad-client="ca-pub-3916832696917101"
+        data-ad-slot="2858197239"
         data-ad-format="auto"
         data-full-width-responsive="true"
       />
@@ -48,7 +49,8 @@ export default function Home() {
         <meta property="og:title" content="QuickFileTools — Free Online File Tools" />
         <meta property="og:description" content="Compress images, convert PDFs, merge documents and more. Free, fast, no signup." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://quickfiletools.com" />
+        <meta property="og:url" content="https://www.quickfiletools.xyz/" />
+        <link rel="canonical" href="https://www.quickfiletools.xyz/" />
       </Helmet>
 
       {/* ── Hero ── */}
@@ -73,14 +75,14 @@ export default function Home() {
 
       {/* ── Ad Banner (top of content) ── */}
       <div className="max-w-6xl mx-auto px-4">
-        <AdBanner slot="horizontal" />
+        <AdBanner />
       </div>
 
       {/* ── Free Tools Grid ── */}
       <section className="py-12 px-4 max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">🆓 Free Tools</h2>
-          <span className="text-sm text-gray-400">{TOOLS.length} tools available</span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">{TOOLS.length} tools available</span>
         </div>
         <p className="text-gray-500 dark:text-gray-400 mb-8">No account needed — start instantly</p>
 
@@ -104,7 +106,7 @@ export default function Home() {
 
       {/* ── Ad Banner (mid content) ── */}
       <div className="max-w-6xl mx-auto px-4">
-        <AdBanner slot="square" />
+        <AdBanner />
       </div>
 
       {/* ── Features ── */}
@@ -136,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FAQ Section (helps SEO) ── */}
+      {/* ── FAQ Section ── */}
       <section className="py-12 px-4 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Frequently Asked Questions</h2>
         <div className="space-y-4">
@@ -160,7 +162,7 @@ export default function Home() {
 
       {/* ── Bottom Ad Banner ── */}
       <div className="max-w-6xl mx-auto px-4 pb-8">
-        <AdBanner slot="horizontal" />
+        <AdBanner />
       </div>
     </>
   );

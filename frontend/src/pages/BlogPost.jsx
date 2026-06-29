@@ -4,8 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import { blogAPI } from "../services/api";
 
-// ─── AdSense Banner ───────────────────────────────────────────────────────────
-function AdBanner({ slot = "1234567890" }) {
+function AdBanner() {
   useEffect(() => {
     try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch {}
   }, []);
@@ -13,8 +12,8 @@ function AdBanner({ slot = "1234567890" }) {
     <div className="w-full flex justify-center my-8">
       <ins className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-        data-ad-slot={slot}
+        data-ad-client="ca-pub-3916832696917101"
+        data-ad-slot="9830799699"
         data-ad-format="auto"
         data-full-width-responsive="true" />
     </div>
@@ -22,8 +21,8 @@ function AdBanner({ slot = "1234567890" }) {
 }
 
 export default function BlogPost() {
-  const { slug }            = useParams();
-  const [post, setPost]     = useState(null);
+  const { slug }              = useParams();
+  const [post, setPost]       = useState(null);
   const [related, setRelated] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,7 +30,6 @@ export default function BlogPost() {
     blogAPI.getOne(slug)
       .then((r) => {
         setPost(r.data);
-        // Fetch related posts by first tag
         if (r.data.tags?.length) {
           blogAPI.getAll({ status: "published", tag: r.data.tags[0] })
             .then((res) => setRelated((res.data.posts || []).filter((p) => p.slug !== slug).slice(0, 3)))
@@ -54,17 +52,18 @@ export default function BlogPost() {
     </div>
   );
 
-  // Structured data for Google (Article schema)
+  const canonicalUrl = `https://www.quickfiletools.xyz/blog/${post.slug}`;
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
     "author": { "@type": "Organization", "name": "QuickFileTools" },
-    "publisher": { "@type": "Organization", "name": "QuickFileTools", "url": "https://quickfiletools.com" },
+    "publisher": { "@type": "Organization", "name": "QuickFileTools", "url": "https://www.quickfiletools.xyz" },
     "datePublished": post.publishedAt,
     "dateModified": post.updatedAt || post.publishedAt,
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://quickfiletools.com/blog/${post.slug}` },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
   };
 
   return (
@@ -73,11 +72,11 @@ export default function BlogPost() {
         <title>{post.seoTitle || post.title} — QuickFileTools Blog</title>
         <meta name="description" content={post.seoDesc || post.excerpt} />
         <meta name="keywords" content={post.tags?.join(", ")} />
-        <link rel="canonical" href={`https://quickfiletools.com/blog/${post.slug}`} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title"       content={post.seoTitle || post.title} />
         <meta property="og:description" content={post.seoDesc  || post.excerpt} />
         <meta property="og:type"        content="article" />
-        <meta property="og:url"         content={`https://quickfiletools.com/blog/${post.slug}`} />
+        <meta property="og:url"         content={canonicalUrl} />
         {post.coverImage && <meta property="og:image" content={post.coverImage} />}
         <meta name="twitter:card"        content="summary_large_image" />
         <meta name="twitter:title"       content={post.seoTitle || post.title} />
@@ -90,17 +89,14 @@ export default function BlogPost() {
           <ArrowLeft className="h-4 w-4" /> Back to Blog
         </Link>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {post.tags?.map((tag) => (
             <span key={tag} className="text-xs bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 px-2.5 py-1 rounded-full font-medium">{tag}</span>
           ))}
         </div>
 
-        {/* Title */}
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-snug">{post.title}</h1>
 
-        {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-gray-400 mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
           <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {post.readTime} min read</span>
           {post.publishedAt && (
@@ -110,15 +106,12 @@ export default function BlogPost() {
           <span>By QuickFileTools</span>
         </div>
 
-        {/* Cover image */}
         {post.coverImage && (
           <img src={post.coverImage} alt={post.title} className="w-full rounded-2xl mb-8 object-cover max-h-72" />
         )}
 
-        {/* Top Ad */}
-        <AdBanner slot="1111111111" />
+        <AdBanner />
 
-        {/* Content */}
         <div
           className="prose dark:prose-invert prose-sm max-w-none
             prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
@@ -128,10 +121,8 @@ export default function BlogPost() {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* Mid-article Ad */}
-        <AdBanner slot="2222222222" />
+        <AdBanner />
 
-        {/* Tool CTA */}
         {post.relatedTool && (
           <div className="mt-8 rounded-2xl bg-primary-50 dark:bg-primary-900/20 border border-primary-100 dark:border-primary-800 p-6 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-300 mb-3 font-medium">Try it yourself — free tool</p>
@@ -142,10 +133,8 @@ export default function BlogPost() {
           </div>
         )}
 
-        {/* Bottom Ad */}
-        <AdBanner slot="3333333333" />
+        <AdBanner />
 
-        {/* Related posts */}
         {related.length > 0 && (
           <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800">
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5">Related Articles</h2>
